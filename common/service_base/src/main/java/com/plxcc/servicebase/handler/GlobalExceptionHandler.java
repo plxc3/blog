@@ -24,6 +24,7 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public Result error(Exception e){
         e.printStackTrace();
+//        log.error("统一异常处理",e.getMessage());
         return Result.fail()
                 .setMsg("执行了全局异常处理")
                 .setData("error",e.getMessage());
